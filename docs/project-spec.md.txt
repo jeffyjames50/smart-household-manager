@@ -1,0 +1,26 @@
+# Smart Household Manager
+
+## Problem
+Families struggle to manage chores and track contributions fairly.
+
+## Users
+Families, couples, shared apartments.
+
+## MVP Features
+- Authentication
+- Create household
+- Invite members
+- Create task
+- Assign task
+- Task status
+- Points
+- Leaderboard
+
+## User Flow
+User registers → creates household → invites members → creates tasks → completes tasks → points update
+
+## Future Features
+- Notifications
+- Recurring tasks
+- Analytics
+- AI suggestions

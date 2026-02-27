@@ -1,0 +1,1 @@
+# smart-household-manager

@@ -1,7 +1,9 @@
 package com.jeffyjames.household.controller;
 
-import com.jeffyjames.household.model.User;
+import com.jeffyjames.household.dto.UserRequestDTO;
+import com.jeffyjames.household.dto.UserResponseDTO;
 import com.jeffyjames.household.service.UserService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,7 +15,7 @@ public class UserController {
     private UserService userService;
 
     @PostMapping
-    public User createUser(@RequestBody User user) {
-        return userService.createUser(user);
+    public UserResponseDTO createUser(@Valid @RequestBody UserRequestDTO request) {
+        return userService.createUser(request);
     }
 }

@@ -1,5 +1,7 @@
 package com.jeffyjames.household.controller;
 
+import com.jeffyjames.household.dto.LoginRequestDTO;
+import com.jeffyjames.household.dto.LoginResponseDTO;
 import com.jeffyjames.household.dto.UserRequestDTO;
 import com.jeffyjames.household.dto.UserResponseDTO;
 import com.jeffyjames.household.service.UserService;
@@ -17,5 +19,9 @@ public class UserController {
     @PostMapping
     public UserResponseDTO createUser(@Valid @RequestBody UserRequestDTO request) {
         return userService.createUser(request);
+    }
+    @PostMapping("/login")
+    public LoginResponseDTO login(@RequestBody LoginRequestDTO request) {
+        return userService.login(request);
     }
 }
